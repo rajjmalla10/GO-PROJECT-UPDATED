@@ -10,7 +10,7 @@ var (
 )
 
 func Connect() (*gorm.DB, error) {
-	dsn := "root:root@tcp(127.0.0.1:3306)/simplerest?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:@tcp(127.0.0.1:3308)/simplerest?charset=utf8mb4&parseTime=True&loc=Local"
 	d, err := gorm.Open("mysql", dsn)
 	if err != nil {
 		return nil, err
